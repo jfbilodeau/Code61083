@@ -1,10 +1,11 @@
-name: Build and Test ASP.NET
+name: Build and Test DemoWebApp
 
 # Trigger the workflow on push events to the main branch
 on:
   push:
     branches:
       - main
+  workflow_dispatch: # Allow manual triggering of the workflow
 
 jobs:
   build:
