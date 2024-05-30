@@ -42,5 +42,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: DemoWebApp
-        path: ${{env.DOTNET_ROOT}}/.
+        path: ${{env.DOTNET_ROOT}}
      
