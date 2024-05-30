@@ -34,3 +34,13 @@ jobs:
     # Step 5: Run tests in Release configuration
     - name: Test
       run: dotnet test --configuration Release
+
+    - name: Publish
+      run: dotnet publish --configuration Release
+
+    - name: Save the deployment artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: DemoWebApp
+        path: ${{env.DOTNET_ROOT}}/.
+     
