@@ -36,13 +36,13 @@ jobs:
       run: dotnet test --configuration Release
 
     - name: Publish
-      run: dotnet publish --configuration Release
+      run: dotnet publish --configuration Release -o out
 
     - name: Save the deployment artifact
       uses: actions/upload-artifact@v4
       with:
         name: DemoWebApp
-        path: ${{env.DOTNET_ROOT}}
+        path: ${{env.DOTNET_ROOT}}/out
 
   publish:
     runs-on: ubuntu-latest
